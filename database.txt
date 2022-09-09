@@ -1,0 +1,16 @@
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('_cfduid', 'iwm.org.uk', 'Used by the content network, Cloudflare, to identify trusted web traffic', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('JSESSIONID', 'nr-data.net', 'Preserves user states across page requests', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('Test_cookie', 'doubleclick.net', 'Doubleclick. Used to check if the user’s browser supports cookies', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('VISITOR_INFO1_LIVE', '179 days', 'Tries to estimate users’ bandwidth on pages with YouTube videos', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('yt-remote-cast-available', 'session', 'Stores the user’s video player preferences using embedded YouTube video', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('yt-remote-connected-devices', 'persistent', 'Stores the user’s video player preferences using embedded YouTube video', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('yt-remote-fast-check-period', 'session', 'Stores the user’s video player preferences using embedded YouTube video', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('yt-remote-session-name', 'session', 'Stores the user’s video player preferences using embedded YouTube video', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('JwplayerLocalId', 'persistent', 'Used to determine the optimal video quality based on the visitor’s device and network settings', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('yt.innertube::nextid', 'persistent', 'Registers a unique ID to keep statistics of what YouTube videos the user has seen', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('_fbp', '3 months', 'Used by Facebook to deliver advertisement products', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('Ads/ga-audiences', 'session', 'Used by Google Adwords to re-engage visitors thjat are likely to convert to customers based on behaviour on across websites', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('pagead/landing', 'session', 'Collects data on visitor behaviour from multiple websites to present more relevant advertisements', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('OT_1073745459', 'session', 'Pending', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('u2', '3 months', 'Collects data related to the user's navigation visits to webpages in order to assess the efficacy of ads that are displayed on the website.', 'tracking');
+INSERT INTO FILTER_LIST (cookie, domain, description, type) VALUES('SZMKSessionid', 'persistent', 'Collects data on visitor behaviour from multiple websites, in order to present more relevant advertisement - This also allows the website to limit the number of times that they are shown the same advertisement.', 'tracking');
