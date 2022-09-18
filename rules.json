@@ -29,5 +29,16 @@
       "condition": {
         "resourceTypes": ["script"]
       }
+    },
+
+    {
+      "id": 3,
+      "priority": 1,
+      "action": {
+        "type": "allow"
+      },
+      "condition": {
+        "resourceTypes": ["script"]
+      }
     }
   ]
