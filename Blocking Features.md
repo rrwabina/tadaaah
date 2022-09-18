@@ -4,10 +4,8 @@ Blocking Features
 [x] Filter cookies based on its details (i.e., domain, path, value, etc)
 [ ] Filter cookies based on 
             [x] 1. Functionality (CSS, website styles) 
-                How: Access website's CSS style  
             [] 2. Analytics (collects statistical information how visitors use a website)
             [] 3. Advertising/Tracking (tracks user's browsing behavior)
-            [] 4. History tracker
             [x] 5. Diagram map
 [x] Filter cookies with tracking configs
 [ ] Block cookies with tracking configs
@@ -24,6 +22,14 @@ Blocking Features
 Performance Measurement and Evaluation 
 [ ] Compare results against Requestly
 [ ]
+
+
+
+
+
+[ ] Log system -- history blocking + notifications 
+        websites blocked, mini dashboard
+
 
 Study: 
 [ ] Study service worker 
