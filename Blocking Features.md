@@ -8,8 +8,8 @@ Blocking Features
             [] 2. Analytics (collects statistical information how visitors use a website)
             [] 3. Advertising/Tracking (tracks user's browsing behavior)
             [] 4. History tracker
-            [] 5. Diagram map
-[ ] Filter cookies with tracking configs
+            [x] 5. Diagram map
+[x] Filter cookies with tracking configs
 [ ] Block cookies with tracking configs
 [x] Acquisition of HTTP Requests
 [x] Block HTTP Requests through manual source edit
@@ -18,6 +18,7 @@ Blocking Features
 [ ] Extract information from unsecured cookies
 [ ] Filter unsecured cookies (i.e., tracking cookies)
 [x] Create NoSQL database for tracking cookies (Cassandra)
+[x] Create NoSQL database for filtered cookies (Cassandra)
 [x] Connect Cassandra to Docker <sudo docker -exec -it cassandra-node bash>
 
 Performance Measurement and Evaluation 
