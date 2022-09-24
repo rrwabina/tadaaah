@@ -47,33 +47,6 @@ document.getElementById('id_button_getAdvanced').onclick = () => {
       }
     document.getElementById('id_text').value = text;}));}
 
-// document.getElementById('id_button_getCassandra').onclick = () => {
-//   chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
-//     //let text = 'Number of cookies: ' + cookies.length + '\n' + '\n';
-//     let text = 'CREATE TABLE cookielist(' +
-//                   'domain VARCHAR, path VARCHAR, name VARCHAR, expiration VARCHAR, host VARCHAR, http VARCHAR,' +
-//                   ' sitestatus VARCHAR, secure VARCHAR, session VARCHAR, storeid VARCHAR, value VARCHAR, PRIMARY KEY (domain));'
-//                   + '\n' + '\n';
-//     for (let cookie of cookies)
-//       {
-//         text += 
-//         'INSERT INTO cookielist ' + '(domain, name, expiration, host, http, sitestatus, secure, session, storeid)' + 
-//         ' VALUES' + '(' + 
-//         '\'' + cookie.domain + '\'' + ',' +
-//         // '\'' + cookie.path    + '\'' + ',' +
-//         '\'' + cookie.name    + '\'' + ',' +
-//         '\'' + cookie.expirationDate + '\'' + ',' +
-//         '\'' + cookie.hostOnly + '\'' + ',' +
-//         '\'' + cookie.httpOnly + '\'' + ',' +
-//         '\'' + cookie.sameSite + '\'' + ',' +
-//         '\'' + cookie.sameSite + '\'' + ',' +
-//         '\'' + cookie.session  + '\'' + ',' +
-//         '\'' + cookie.storeId  + '\'' +
-//         // '\'' + cookie.value    + '\'' +
-//         ');' + '\n' + '\n';
-//       }
-//     document.getElementById('id_text').value = text;}));}
-
 document.getElementById('id_button_getCassandra').onclick = () => {
   chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
     let text = 'db.cookiedb.insertMany([' + '\n';
@@ -93,9 +66,6 @@ document.getElementById('id_button_getCassandra').onclick = () => {
       }
     document.getElementById('id_text').value = text;}));}
 
-
-// document.getElementById('id_button_set').onclick = () => {
-//   chrome.cookies.set(getDetails('set'));}
 
 document.getElementById('id_button_remove').onclick = () => {
   chrome.cookies.remove(getDetails('remove'));}
@@ -218,5 +188,31 @@ load(function(p) {
   updateFilters();
 });
 
+// document.getElementById('id_button_getCassandra').onclick = () => {
+//   chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
+//     //let text = 'Number of cookies: ' + cookies.length + '\n' + '\n';
+//     let text = 'CREATE TABLE cookielist(' +
+//                   'domain VARCHAR, path VARCHAR, name VARCHAR, expiration VARCHAR, host VARCHAR, http VARCHAR,' +
+//                   ' sitestatus VARCHAR, secure VARCHAR, session VARCHAR, storeid VARCHAR, value VARCHAR, PRIMARY KEY (domain));'
+//                   + '\n' + '\n';
+//     for (let cookie of cookies)
+//       {
+//         text += 
+//         'INSERT INTO cookielist ' + '(domain, name, expiration, host, http, sitestatus, secure, session, storeid)' + 
+//         ' VALUES' + '(' + 
+//         '\'' + cookie.domain + '\'' + ',' +
+//         // '\'' + cookie.path    + '\'' + ',' +
+//         '\'' + cookie.name    + '\'' + ',' +
+//         '\'' + cookie.expirationDate + '\'' + ',' +
+//         '\'' + cookie.hostOnly + '\'' + ',' +
+//         '\'' + cookie.httpOnly + '\'' + ',' +
+//         '\'' + cookie.sameSite + '\'' + ',' +
+//         '\'' + cookie.sameSite + '\'' + ',' +
+//         '\'' + cookie.session  + '\'' + ',' +
+//         '\'' + cookie.storeId  + '\'' +
+//         // '\'' + cookie.value    + '\'' +
+//         ');' + '\n' + '\n';
+//       }
+//     document.getElementById('id_text').value = text;}));}
 
 
