@@ -178,7 +178,7 @@ function save(newPatterns, callback) {
   chrome.storage.sync.set({
     'blocked_patterns': newPatterns
   }, function() {
-    updateFilters();
+    updateFilters();dom
     callback.call();
   });
 }
