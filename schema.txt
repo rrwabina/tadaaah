@@ -1,0 +1,130 @@
+db.masterdb.insertMany([
+{
+	"userid":"840-25-7088",
+	"cookies":
+		[{
+		"domain":"studentmahidolacmy.sharepoint.com",
+		"name":"MicrosoftApplicationsTelemetryFirstLaunchTime",
+		"expiration":"1695111155",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770188",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770328",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		}]
+},
+{
+	"userid":"140-64-6735",
+	"cookies":
+		[{
+		"domain":"studentmahidolacmy.sharepoint.com",
+		"name":"MicrosoftApplicationsTelemetryFirstLaunchTime",
+		"expiration":"1695111155",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770188",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		}]
+},
+{
+	"userid":"181-07-0485",
+	"cookies":
+		[{
+		"domain":"studentmahidolacmy.sharepoint.com",
+		"name":"MicrosoftApplicationsTelemetryFirstLaunchTime",
+		"expiration":"1695111155",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770188",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		}]
+},
+{
+	"userid":"474-77-5653",
+	"cookies":
+		[{
+		"domain":"tracking.intentsify.io",
+		"name":"userId",
+		"expiration":"1696215519.745901",
+		"host":true,
+		"http":false,
+		"site":"no_restriction",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"studentmahidolacmy.sharepoint.com",
+		"name":"MicrosoftApplicationsTelemetryFirstLaunchTime",
+		"expiration":"1695111155",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770188",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		},
+		{
+		"domain":"www.mongodb.com",
+		"name":"cxl_returning_visitor",
+		"expiration":"1671770584",
+		"host":true,
+		"http":false,
+		"site":"unspecified",
+		"session":false,
+		"storeid":"0"
+		}]
+}
+])
+
+
