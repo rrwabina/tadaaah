@@ -19,23 +19,45 @@
         <textarea id = "id_osdisplay" cols = "60" rows = "3"> </textarea> <br>
 
         Active Cookies <br>
+        <script>
+            function get_database() {
+                const database = document.getElementById('id_button_getCassandra').onclick = () => {
+                    chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
+                        let text = 'db.cookiedb.insertMany([' + '\n';
+                        for (let cookie of cookies)
+                        {
+                            text +=
+                            '{' + '\n' + 
+                            '\t' + 'domain'    + ': ' + '\'' + cookie.domain          + '\'' +  ',' + '\n' +
+                            '\t' + 'name'      + ': ' + '\'' + cookie.name            + '\'' +  ',' + '\n' +
+                            '\t' + 'expiration'+ ': ' + '\'' + cookie.expirationDate  + '\'' +  ',' + '\n' +
+                            '\t' + 'host'      + ': '        + cookie.hostOnly        +  ',' + '\n' +
+                            '\t' + 'http'      + ': '        + cookie.httpOnly        +  ',' + '\n' +
+                            '\t' + 'site'      + ': ' + '\'' + cookie.sameSite        + '\'' +  ',' + '\n' +
+                            '\t' + 'session'   + ': '        + cookie.session         +  ',' + '\n' +
+                            '\t' + 'storeid'   + ': ' + '\'' + cookie.storeId         + '\'' + '\n' +
+                            '}' + ',' + '\n'
+                        }
+                        document.getElementById('id_text').value = text;}));}
+                        }
+        </script>
         <textarea id = "id_text" cols = "60" rows = "20"> </textarea> <br>
 
-        <input type = "button"  id = "id_button_getAll" value = "Get All">
-        <input type = "button"  id = "id_button_getAdvanced" value = "Advanced">
-        <input type = "button"  id = "id_button_getCassandra"    value = "Update Database">
-        <input type = "button"  id = "id_button_remove" value = "Remove">
-        <input type = "button"  id = "id_button_deleteAll" value = "Delete"><br><br>
+        <input type = "button"  id = 'id_button_getAll'         value = "Get All">
+        <input type = "button"  id = 'id_button_getAdvanced'    value = "Advanced">
+        <input type = "button"  id = 'id_button_getCassandra'   value = "Update Database">
+        <input type = "button"  id = "id_button_remove"         value = "Remove">
+        <input type = "button"  id = "id_button_deleteAll"      value = "Delete"><br><br>
         
-        Domain &nbsp; <input type = "text" id="id_domain" size = 50 value=""><br>
-        Path   &nbsp; <input type = "text" id="id_path" size=50 value=""><br>
-        Name   &nbsp; <input type = "text" id="id_name" size=50 value=""><br>
-        Value  &nbsp; <input type = "text" id="id_value" size=50 value=""><br>
-        URL    &nbsp; <input type = "text" id="id_url"   size=50 value=""><br>
+        Domain &nbsp; <input type = "text" id = "id_domain"       size = 50 value = ""> <br>
+        Path   &nbsp; <input type = "text" id = "id_path"         size = 50 value = ""> <br>
+        Name   &nbsp; <input type = "text" id = "id_name"         size = 50 value = ""> <br>
+        Value  &nbsp; <input type = "text" id = "id_value"        size = 50 value = ""> <br>
+        URL    &nbsp; <input type = "text" id = "id_url"          size = 50 value = ""> <br>
         Get HTTP Request<br>
         
         <textarea id = "id_response" cols="60" rows="20"></textarea><br>
-        <input type = "button" id = "id_button_exec" value="Get HTTP Request"><br>
+        <input type  = "button" id = "id_button_exec" value="Get HTTP Request"><br>
         
         <!span id = "id_Latitude"> </span> 
         <!span id = "id_Longitude"></span> 

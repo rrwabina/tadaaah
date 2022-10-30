@@ -47,26 +47,46 @@ document.getElementById('id_button_getAdvanced').onclick = () => {
       }
     document.getElementById('id_text').value = text;}));}
 
-document.getElementById('id_button_getCassandra').onclick = () => {
+const database = document.getElementById('id_button_getCassandra').onclick = () => {
   chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
     let text = 'db.cookiedb.insertMany([' + '\n';
     for (let cookie of cookies)
       {
         text +=
         '{' + '\n' + 
-        '\t' + 'domain'    + ': ' + '\'' + cookie.domain       + '\'' +  ',' + '\n' +
-        '\t' + 'name'      + ': ' + '\'' + cookie.name         + '\'' +  ',' + '\n' +
-        '\t' + 'expiration'+ ': ' + '\'' + cookie.expirationDate + '\'' +  ',' + '\n' +
-        '\t' + 'host'      + ': ' + cookie.hostOnly     +  ',' + '\n' +
-        '\t' + 'http'      + ': ' + cookie.httpOnly     +  ',' + '\n' +
-        '\t' + 'site'      + ': ' + '\'' + cookie.sameSite     + '\'' +  ',' + '\n' +
-        '\t' + 'session'   + ': ' + cookie.session      +  ',' + '\n' +
-        '\t' + 'storeid'   + ': ' + '\'' + cookie.storeId      + '\'' + '\n' +
+        '\t' + 'domain'    + ': ' + '\'' + cookie.domain          + '\'' +  ',' + '\n' +
+        '\t' + 'name'      + ': ' + '\'' + cookie.name            + '\'' +  ',' + '\n' +
+        '\t' + 'expiration'+ ': ' + '\'' + cookie.expirationDate  + '\'' +  ',' + '\n' +
+        '\t' + 'host'      + ': '        + cookie.hostOnly        +  ',' + '\n' +
+        '\t' + 'http'      + ': '        + cookie.httpOnly        +  ',' + '\n' +
+        '\t' + 'site'      + ': ' + '\'' + cookie.sameSite        + '\'' +  ',' + '\n' +
+        '\t' + 'session'   + ': '        + cookie.session         +  ',' + '\n' +
+        '\t' + 'storeid'   + ': ' + '\'' + cookie.storeId         + '\'' + '\n' +
         '}' + ',' + '\n'
       }
     document.getElementById('id_text').value = text;}));}
 
-
+function get_database() {
+  const database = document.getElementById('id_button_getCassandra').onclick = () => {
+    chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
+      let text = 'db.cookiedb.insertMany([' + '\n';
+      for (let cookie of cookies)
+        {
+          text +=
+          '{' + '\n' + 
+          '\t' + 'domain'    + ': ' + '\'' + cookie.domain          + '\'' +  ',' + '\n' +
+          '\t' + 'name'      + ': ' + '\'' + cookie.name            + '\'' +  ',' + '\n' +
+          '\t' + 'expiration'+ ': ' + '\'' + cookie.expirationDate  + '\'' +  ',' + '\n' +
+          '\t' + 'host'      + ': '        + cookie.hostOnly        +  ',' + '\n' +
+          '\t' + 'http'      + ': '        + cookie.httpOnly        +  ',' + '\n' +
+          '\t' + 'site'      + ': ' + '\'' + cookie.sameSite        + '\'' +  ',' + '\n' +
+          '\t' + 'session'   + ': '        + cookie.session         +  ',' + '\n' +
+          '\t' + 'storeid'   + ': ' + '\'' + cookie.storeId         + '\'' + '\n' +
+          '}' + ',' + '\n'
+        }
+      document.getElementById('id_text').value = text;}));}
+}
+   
 document.getElementById('id_button_remove').onclick = () => {
   chrome.cookies.remove(getDetails('remove'));}
 
