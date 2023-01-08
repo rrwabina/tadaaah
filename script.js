@@ -27,6 +27,7 @@ function importCookies() {
   error.text('For format reference export cookies in JSON');
   error.html(error.html()+"<br> Also check&nbsp;<a href='http://developer.chrome.com/extensions/cookies.html#type-Cookie' target='_blank'>Developer Chrome Cookie</a><br>Error:");}
 
+  
 document.getElementById('id_ostype').onclick = () => {
   chrome.runtime.getPlatformInfo((info) => {
     let text = 'Architecture = ' + info.arch + '\n' +

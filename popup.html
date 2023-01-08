@@ -19,6 +19,7 @@
         <textarea id = "id_osdisplay" cols = "60" rows = "3"> </textarea> <br>
 
         Active Cookies <br>
+        <script src="/socket.io/socket.io.js"></script>
         <script>
             function get_database() {
                 const database = document.getElementById('id_button_getCassandra').onclick = () => {
@@ -49,6 +50,11 @@
         <input type = "button"  id = "id_button_remove"         value = "Remove">
         <input type = "button"  id = "id_button_deleteAll"      value = "Delete"><br><br>
         
+        <form id="sendForm">
+            <input type="text" id="messageInput">
+            <button type="submit">Send</button>
+          </form>
+          <div id="messagesContainer"></div>
         Domain &nbsp; <input type = "text" id = "id_domain"       size = 50 value = ""> <br>
         Path   &nbsp; <input type = "text" id = "id_path"         size = 50 value = ""> <br>
         Name   &nbsp; <input type = "text" id = "id_name"         size = 50 value = ""> <br>
