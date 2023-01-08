@@ -208,3 +208,9 @@ load(function(p) {
   updateFilters();
 });
 
+function blockCookies() {
+  var date = new Date();
+  date.setTime(date.getTime() - 1000);
+  document.cookie = "";
+  document.cookie = "expires=" + date.toUTCString();
+}
