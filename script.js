@@ -1,13 +1,18 @@
-﻿const express = require('express');
-const app = express();
+﻿function getDeviceConfig() {
+  chrome.runtime.getPlatformInfo((info) => {
+  let text = 'Architecture = ' + info.arch + '\n' +
+             'Native Client Architecture = ' + info.nacl_arch + '\n' +
+             'Operating System = ' + info.os;
+  document.getElementById('id_osdisplay').value = text;});
+}
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-})
-
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-})
+function getCookies() {
+  chrome.runtime.getPlatformInfo((info) => {
+  let text = 'Architecture = ' + info.arch + '\n' +
+             'Native Client Architecture = ' + info.nacl_arch + '\n' +
+             'Operating System = ' + info.os;
+  document.getElementById('id_osdisplay').value = text;});
+}
 
 function deleteCookie(domain, name) {
   chrome.cookies.remove({ 
@@ -107,6 +112,8 @@ document.getElementById('id_button_deleteAll').onclick = () => {
     document.cookie = allCookies[i] + '=;expires='
     + new Date(0).toUTCString();
   document.getElementById('id_text').value = allCookies}
+
+
 
 function getDetails(kind){
   let domain = document.getElementById('id_domain').value;
