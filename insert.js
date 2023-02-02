@@ -1,6 +1,6 @@
 // THIS IS FINAL
 
-const dbConnect = require('./mongodb');
+const dbConnect = require('./connectMongodb');
 
 const insertData = async ()=>{ 
     let data = await dbConnect();
