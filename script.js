@@ -1,4 +1,20 @@
-﻿function getDeviceConfig() {
+﻿
+async function getData(collection_name) { 
+  const {MongClient, MongoClient, Db} = require('mongodb')
+  const url = 'mongodb+srv://rrwabina:Carpediem13@maindb.ium16x6.mongodb.net/?retryWrites=true&w=majority';
+  const databaseName = 'maindb'
+  const client = new MongoClient(url);
+  
+  let result = await client.connect();
+  db = result.db(databaseName);
+  collection = db.collection(collection_name);
+  let data = await collection.find({}).toArray();
+  console.log(data)
+  document.getElementById('id_osdisplay').value = data
+}
+
+
+function getDeviceConfig() {
   chrome.runtime.getPlatformInfo((info) => {
   let text = 'Architecture = ' + info.arch + '\n' +
              'Native Client Architecture = ' + info.nacl_arch + '\n' +
@@ -19,15 +35,49 @@ function deleteCookie(domain, name) {
     'domain': domain,
     'name': name, });}
 
+
+function deleteAllCookies() {
+  const cookies = document.cookie.split(";");
+
+  cookies.forEach(cookie => {
+    const cookieName = cookie.split("=")[0].trim();
+    document.cookie = cookieName;
+  });
+
+  alert("All cookies have been deleted!");
+}
+
 function importCookies() {
   var nCookiesImportedThisTime = 0;
   var text = $('.value', '#pasteCookie').val();
   var error = $('.error', '#pasteCookie');
   error.hide();
   error.text('For format reference export cookies in JSON');
-  error.html(error.html()+"<br> Also check&nbsp;<a href='http://developer.chrome.com/extensions/cookies.html#type-Cookie' target='_blank'>Developer Chrome Cookie</a><br>Error:");}
+  error.html(error.html() + 
+      "<br> Also check&nbsp;<a href='http://developer.chrome.com/extensions/cookies.html#type-Cookie' target='_blank'>Developer Chrome Cookie</a><br>Error:");}
 
-  
+
+function connectToMongoDB() {
+  const express = require('express');
+  const mongoose = require('mongoose');
+  const app = express();
+
+  const url = 'mongodb+srv://rrwabina:Carpediem13@maindb.ium16x6.mongodb.net/?retryWrites=true&w=majority'
+
+  async function connect() { 
+      try { 
+          await mongoose.connect(uri);
+          console.log('Connected to MongoDB');
+      } catch(error) { 
+          console.error(error);
+      }
+    }
+  connect(); 
+  app.listen(8000, () => { 
+      console.log('Server started on port 8000');
+  })
+}
+
 document.getElementById('id_ostype').onclick = () => {
   chrome.runtime.getPlatformInfo((info) => {
     let text = 'Architecture = ' + info.arch + '\n' +
@@ -104,17 +154,12 @@ function get_database() {
       document.getElementById('id_text').value = text;}));}
 }
    
-document.getElementById('id_button_remove').onclick = () => {
-  chrome.cookies.remove(getDetails('remove'));}
-
 document.getElementById('id_button_deleteAll').onclick = () => {
   var allCookies = document.cookie.split(';');
   for (var i = 0; i < allCookies.length; i++)
     document.cookie = allCookies[i] + '=;expires='
     + new Date(0).toUTCString();
   document.getElementById('id_text').value = allCookies}
-
-
 
 function getDetails(kind){
   let domain = document.getElementById('id_domain').value;

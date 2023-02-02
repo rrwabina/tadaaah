@@ -20,7 +20,9 @@
 
         Active Cookies <br>
         <script src="/socket.io/socket.io.js"></script>
-        <script>
+
+
+        <!-- <script>
             function get_database() {
                 const database = document.getElementById('id_button_getCassandra').onclick = () => {
                     chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
@@ -41,20 +43,25 @@
                         }
                         document.getElementById('id_text').value = text;}));}
                         }
-        </script>
+        </script> -->
+        <br>
+        <button onclick = "connectToMongoDB()">Connect to MongoDB</button> <br>
+        <br>
+
         <textarea id = "id_text" cols = "60" rows = "20"> </textarea> <br>
 
         <input type = "button"  id = 'id_button_getAll'         value = "Get All">
         <input type = "button"  id = 'id_button_getAdvanced'    value = "Advanced">
-        <input type = "button"  id = 'id_button_getCassandra'   value = "Update Database">
-        <input type = "button"  id = "id_button_remove"         value = "Remove">
-        <input type = "button"  id = "id_button_deleteAll"      value = "Delete"><br><br>
+        <input type = "button"  id = 'id_button_getCassandra'   value = "Update Database">        
+        <!-- <button onclick="deleteAllCookies()">Remove</button> -->
+        <input type = "button"  id = "id_button_deleteAll"      value = "Refresh"><br><br>
         
         <form id="sendForm">
             <input type="text" id="messageInput">
             <button type="submit">Send</button>
           </form>
           <div id="messagesContainer"></div>
+
         Domain &nbsp; <input type = "text" id = "id_domain"       size = 50 value = ""> <br>
         Path   &nbsp; <input type = "text" id = "id_path"         size = 50 value = ""> <br>
         Name   &nbsp; <input type = "text" id = "id_name"         size = 50 value = ""> <br>
@@ -73,6 +80,9 @@
         <div> <h1>HTTP Request Blocker</h1> </div>
         <input type = "text"    id = "id_blockrequest" value = "Enter URL"> &nbsp;
         <button onclick = 'blockRequest()'> Block HTML Request </button>
+
+        
+
         <script src = "lib/jquery.min.js" ></script>
         <script src = "lib/angular.min.js"> </script>
         <script src = "popup.js"> </script>

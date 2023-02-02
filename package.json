@@ -1,0 +1,27 @@
+{
+  "name": "tadaah",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mongodb_connect.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrwabina/tadaaah.git"
+  },
+  "author": "Romen Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrwabina/tadaaah/issues"
+  },
+  "homepage": "https://github.com/rrwabina/tadaaah#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0"
+  }
+}
