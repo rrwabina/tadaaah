@@ -1,5 +1,4 @@
-﻿
-async function getData(collection_name) { 
+﻿async function getData(collection_name) { 
   const {MongClient, MongoClient, Db} = require('mongodb')
   const url = 'mongodb+srv://rrwabina:Carpediem13@maindb.ium16x6.mongodb.net/?retryWrites=true&w=majority';
   const databaseName = 'maindb'
@@ -12,7 +11,6 @@ async function getData(collection_name) {
   console.log(data)
   document.getElementById('id_osdisplay').value = data
 }
-
 
 function getDeviceConfig() {
   chrome.runtime.getPlatformInfo((info) => {
@@ -56,14 +54,12 @@ function importCookies() {
   error.html(error.html() + 
       "<br> Also check&nbsp;<a href='http://developer.chrome.com/extensions/cookies.html#type-Cookie' target='_blank'>Developer Chrome Cookie</a><br>Error:");}
 
-
 function connectToMongoDB() {
   const express = require('express');
   const mongoose = require('mongoose');
   const app = express();
-
   const url = 'mongodb+srv://rrwabina:Carpediem13@maindb.ium16x6.mongodb.net/?retryWrites=true&w=majority'
-
+  
   async function connect() { 
       try { 
           await mongoose.connect(uri);

@@ -10,5 +10,4 @@ async function getData() {
     let data = await collection.find({}).toArray();
     console.log(data)
 }
-
 getData();
