@@ -1,5 +1,3 @@
-// THIS IS FINAL
-
 const {MongClient, MongoClient, Db} = require('mongodb')
 const url = 'mongodb+srv://rrwabina:Carpediem13@maindb.ium16x6.mongodb.net/?retryWrites=true&w=majority';
 const databaseName = 'maindb'
@@ -12,4 +10,5 @@ async function dbConnect() {
     return db.collection('cookiedb');
 
 }
+
 module.exports = dbConnect;

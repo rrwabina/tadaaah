@@ -1,7 +1,6 @@
 // THIS IS FINAL
 
 const dbConnect = require('./connectMongodb');
-
 const insertData = async ()=>{ 
     let data = await dbConnect();
     let result = await data.insert(
@@ -33,4 +32,4 @@ const insertData = async ()=>{
     }
 }
 
-module.exports = insertData;
+insertData();

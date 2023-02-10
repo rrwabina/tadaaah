@@ -21,10 +21,17 @@
   },
   "homepage": "https://github.com/rrwabina/tadaaah#readme",
   "dependencies": {
+    "axios": "^1.3.2",
     "chrome": "^0.1.0",
     "chrome-remote-interface": "^0.32.0",
+    "document": "^0.4.7",
     "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "js-cookie": "^3.0.1",
+    "jsdom": "^21.1.0",
+    "mongodb": "^5.0.1",
     "mongoose": "^6.9.0",
+    "navigator": "^1.0.1",
     "request": "^2.88.2"
   }
 }

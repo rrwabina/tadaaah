@@ -22,7 +22,7 @@ const ReformatCookies = cookies => {
             return `db.cookiedb.insertMany([\n${formatCookies(cookies)}\n])`;
             };
 
-        const text = query(cookies);
+        const text = formatCookie(cookies);
         console.log(text);
 };
 
