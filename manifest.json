@@ -16,12 +16,12 @@
     "webRequest",
     "storage"],
 
-  "icons": {"48": "cookie.png"},
+    "content_scripts": [{
+      "matches": ["http://*/*, https://*/*"],
+      "js": ["script.js", "popup.js"]
+    }],
 
-  "content_scripts": [{
-    "matches": ["http://*/*, https://*/*"],
-    "js": ["script.js", "popup.js"]
-  }],
+  "icons": {"48": "cookie.png"},
   
   "action": {
     "default_title": "TaDaah Tracker Blocker",
