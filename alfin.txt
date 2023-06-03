@@ -1,9 +1,0 @@
-import re
-equation = '10 + 2334 - 2424 / 10 + 232424 * 232'
-equation = list(filter(lambda a: a != ' ', equation))
-equation = ''.join(equation)
-m = re.search(r'([\d\-+*\\\/]+)', equation)
-if not m:
-   exit(1)
-expression = m[1]
-expression
