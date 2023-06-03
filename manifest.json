@@ -31,13 +31,13 @@
       "38": "cookie.png"}
     }
 
-  // "declarative_net_request" : {
-  //   "rule_resources" : [{
-  //     "id": "ruleset",
-  //     "enabled": true,
-  //     "path": "rules.json"
-  //     }]
-  //   }
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset",
+      "enabled": true,
+      "path": "rules.json"
+      }]
+    }
 }
 
 
