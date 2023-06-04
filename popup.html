@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "style.css" />
+        <title>Cookie-Editor</title>
+    </head>
+    
+    <style type = "text/css">
+    * {font-size: 100% ;}
+    </style>
+
+    <body style = "min-width:  250px; min-height: 300px" ng-app = 'RequestBlockerApp'>
+    <title>Tadaah Tracker Blocker</title>
+        <div id = 'pageTitle'> <h1 class = 'container'>Tadaah Tracker Blocker</h1> </div>
+
+        OS Configuration &nbsp;
+        <input type = "button"  id = "id_ostype" value = 'OS Type'> <br><br>
+        <textarea id = "id_osdisplay" cols = "60" rows = "3"> </textarea> <br>
+
+        Active Cookies <br>
+        <script src="/socket.io/socket.io.js"></script>
+
+
+        <!-- <script>
+            function get_database() {
+                const database = document.getElementById('id_button_getCassandra').onclick = () => {
+                    chrome.cookies.getAll(getDetails('getAll'), ((cookies) => {
+                        let text = 'db.cookiedb.insertMany([' + '\n';
+                        for (let cookie of cookies)
+                        {
+                            text +=
+                            '{' + '\n' + 
+                            '\t' + 'domain'    + ': ' + '\'' + cookie.domain          + '\'' +  ',' + '\n' +
+                            '\t' + 'name'      + ': ' + '\'' + cookie.name            + '\'' +  ',' + '\n' +
+                            '\t' + 'expiration'+ ': ' + '\'' + cookie.expirationDate  + '\'' +  ',' + '\n' +
+                            '\t' + 'host'      + ': '        + cookie.hostOnly        +  ',' + '\n' +
+                            '\t' + 'http'      + ': '        + cookie.httpOnly        +  ',' + '\n' +
+                            '\t' + 'site'      + ': ' + '\'' + cookie.sameSite        + '\'' +  ',' + '\n' +
+                            '\t' + 'session'   + ': '        + cookie.session         +  ',' + '\n' +
+                            '\t' + 'storeid'   + ': ' + '\'' + cookie.storeId         + '\'' + '\n' +
+                            '}' + ',' + '\n'
+                        }
+                        document.getElementById('id_text').value = text;}));}
+                        }
+        </script> -->
+        <br>
+        <button onclick = "connectToMongoDB()">Connect to MongoDB</button> <br>
+        <br>
+
+        <textarea id = "id_text" cols = "60" rows = "20"> </textarea> <br>
+
+        <input type = "button"  id = 'id_button_getAll'         value = "Get All">
+        <input type = "button"  id = 'id_button_getAdvanced'    value = "Advanced">
+        <input type = "button"  id = 'id_button_getCassandra'   value = "Update Database">        
+        <!-- <button onclick="deleteAllCookies()">Remove</button> -->
+        <input type = "button"  id = "id_button_deleteAll"      value = "Refresh"><br><br>
+        
+        <form id="sendForm">
+            <input type="text" id="messageInput">
+            <button type="submit">Send</button>
+          </form>
+          <div id="messagesContainer"></div>
+
+        Domain &nbsp; <input type = "text" id = "id_domain"       size = 50 value = ""> <br>
+        Path   &nbsp; <input type = "text" id = "id_path"         size = 50 value = ""> <br>
+        Name   &nbsp; <input type = "text" id = "id_name"         size = 50 value = ""> <br>
+        Value  &nbsp; <input type = "text" id = "id_value"        size = 50 value = ""> <br>
+        URL    &nbsp; <input type = "text" id = "id_url"          size = 50 value = ""> <br>
+        Get HTTP Request<br>
+        
+        <textarea id = "id_response" cols="60" rows="20"></textarea><br>
+        <input type  = "button" id = "id_button_exec" value="Get HTTP Request"><br>
+        
+        <!span id = "id_Latitude"> </span> 
+        <!span id = "id_Longitude"></span> 
+        <!input type = "button", id = "id_GoogleMap", value = "Location">
+        <br/>
+
+        <div> <h1>HTTP Request Blocker</h1> </div>
+        <input type = "text"    id = "id_blockrequest" value = "Enter URL"> &nbsp;
+        <button onclick = 'blockRequest()'> Block HTML Request </button>
+
+        
+
+        <script src = "lib/jquery.min.js" ></script>
+        <script src = "lib/angular.min.js"> </script>
+        <script src = "popup.js"> </script>
+        <script src = "script.js"> </script>
+        <script src = "popup.js"> </script>
+    </body>
+</html>

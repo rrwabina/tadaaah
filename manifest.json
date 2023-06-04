@@ -1,0 +1,48 @@
+﻿{
+  "name": "TaDaah Chrome Extension",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "description": "Tracker Blocker and history retrieval (internal merge)",
+  
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "http://localhost/*"],
+
+  "permissions": [
+    "cookies",
+    "geolocation",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "webRequest",
+    "storage",
+    "activeTab",
+    "webNavigation",
+    "tabs",
+    "history",
+    "downloads"],
+
+
+    "background": {
+      "service_worker": "main_service.js",
+      "type": "module"
+     },
+
+    "content_scripts": [{
+      "matches": ["http://*/*, https://*/*"],
+      "js": ["script.js","indexedDB_popup.js"]
+    }],
+
+    "icons":{
+      "16": "./icons/hero-cookie.png",
+      "48": "./icons/hero-cookie.png",
+      "128": "./icons/hero-cookie.png"
+      },
+
+  
+  "action": {
+    "default_title": "TaDaah Tracker Blocker",
+    "default_popup": "indexedDB_popup.html"} 
+  }
+
+
